@@ -1,30 +1,5 @@
+"use strict";var a=function(e,r){return function(){return r||e((r={exports:{}}).exports,r),r.exports}};var i=a(function(f,t){
+var u=require('@stdlib/ndarray-base-numel-dimension/dist'),n=require('@stdlib/ndarray-base-stride/dist'),s=require('@stdlib/ndarray-base-offset/dist'),v=require('@stdlib/ndarray-base-data-buffer/dist'),o=require('@stdlib/blas-ext-base-done-to/dist').ndarray;function q(e){var r=e[0];return o(u(r,0),v(r),n(r,0),s(r)),r}t.exports=q
+});var d=i();module.exports=d;
 /** @license Apache-2.0 */
-
-'use strict';
-
-/**
-* Fill a one-dimensional double-precision floating-point ndarray with linearly spaced numeric elements which increment by `1` starting from one.
-*
-* @module @stdlib/blas-ext-base-ndarray-done-to
-*
-* @example
-* var Float64Array = require( '@stdlib/array-float64' );
-* var ndarray = require( '@stdlib/ndarray-base-ctor' );
-* var doneTo = require( '@stdlib/blas-ext-base-ndarray-done-to' );
-*
-* var xbuf = new Float64Array( [ 0.0, 0.0, 0.0, 0.0 ] );
-* var x = new ndarray( 'float64', xbuf, [ 4 ], [ 1 ], 0, 'row-major' );
-* // returns <ndarray>[ 0.0, 0.0, 0.0, 0.0 ]
-*
-* var out = doneTo( [ x ] );
-* // returns <ndarray>[ 1.0, 2.0, 3.0, 4.0 ]
-*/
-
-// MODULES //
-
-var main = require( './main.js' );
-
-
-// EXPORTS //
-
-module.exports = main;
+//# sourceMappingURL=index.js.map
