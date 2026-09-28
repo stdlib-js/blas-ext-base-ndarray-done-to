@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,18 +16,11 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var numelDimension = require( '@stdlib/ndarray-base-numel-dimension' );
-var getStride = require( '@stdlib/ndarray-base-stride' );
-var getOffset = require( '@stdlib/ndarray-base-offset' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var strided = require( '@stdlib/blas-ext-base-done-to' ).ndarray;
-
-
-// MAIN //
+import { float64ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Fills a one-dimensional double-precision floating-point ndarray with linearly spaced numeric elements which increment by `1` starting from one.
@@ -38,8 +31,8 @@ var strided = require( '@stdlib/blas-ext-base-done-to' ).ndarray;
 *
 *     -   a one-dimensional input ndarray.
 *
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing ndarrays
-* @returns {ndarray} input ndarray
+* @param arrays - array-like object containing ndarrays
+* @returns input ndarray
 *
 * @example
 * var Float64Vector = require( '@stdlib/ndarray-vector-float64' );
@@ -50,13 +43,9 @@ var strided = require( '@stdlib/blas-ext-base-done-to' ).ndarray;
 * var out = doneTo( [ x ] );
 * // returns <ndarray>[ 1.0, 2.0, 3.0, 4.0 ]
 */
-function doneTo( arrays ) {
-	var x = arrays[ 0 ];
-	strided( numelDimension( x, 0 ), getData( x ), getStride( x, 0 ), getOffset( x ) ); // eslint-disable-line max-len
-	return x;
-}
+declare function doneTo( arrays: [ float64ndarray ] ): float64ndarray;
 
 
 // EXPORTS //
 
-module.exports = doneTo;
+export = doneTo;
